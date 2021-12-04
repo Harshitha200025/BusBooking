@@ -1,0 +1,28 @@
+﻿@model BusBooking.Models.BusDetails
+
+@{
+    ViewBag.Title = "Booking";
+}
+
+<h2>Booking</h2>
+<div class="row">
+    <div class="form-group">
+        <span>
+            @Html.DisplayFor(x => x.busID)
+            @Html.HiddenFor(x => x.customerID)
+            @Html.EditorFor(x => x.source)
+            @Html.EditorFor(x => x.destination)
+
+            @Html.EditorFor(x => x.email)
+            @Html.EditorFor(x => x.phone)
+            @Html.EditorFor(x => x.pickUpPoint)
+
+
+
+
+            @Html.HiddenFor(x => x.busID)
+        </span>
+
+
+    </div>
+</div>

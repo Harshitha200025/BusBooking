@@ -1,0 +1,58 @@
+﻿@model BusBooking.Models.RouteDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RouteDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.busDetails.busName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.busDetails.busName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.travelTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.travelTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.destinations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.destinations)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
