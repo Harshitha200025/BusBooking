@@ -15,6 +15,7 @@ namespace BusBooking.Controllers
         private BusBookingContext db = new BusBookingContext();
 
         // GET: SeatTypes
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             return View(db.seatType.ToList());

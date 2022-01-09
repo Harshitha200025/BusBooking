@@ -29,7 +29,7 @@ namespace BusBooking.Controllers
             Session["bdList"] = bbc.busDetails.Where(x => x.source == src && x.destination == dest).ToList();
             return RedirectToAction("Create", "BusDetails");
         }
-
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
