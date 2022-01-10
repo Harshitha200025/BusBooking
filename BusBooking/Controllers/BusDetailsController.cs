@@ -17,9 +17,14 @@ namespace BusBooking.Controllers
         // GET: BusDetails
         public ActionResult Index()
         {
-            List<BusDetails> bd = (List<BusDetails>)Session["bdList"];
-            //var busDetails = db.busDetails.Include(b => b.seatType);
-            return View(bd);
+
+            var busDet = db.busDetails.ToList();
+            List<BusDetails> bd = new List<BusDetails>();
+                bd=(List<BusDetails>)Session["bdList"];// this bd is null so you were getting exepion. session doesnt have any values.
+            var busDetails = db.busDetails.Include(b => b.seatType);
+            //bd.Add(bd1);
+            return View(busDet);
+           // return View(busDetails);
         }
 
         // GET: BusDetails/Details/5
@@ -48,7 +53,7 @@ namespace BusBooking.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       // [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "busID,typeID,busName,source,destination,time")] BusDetails busDetails)
         {
             if (ModelState.IsValid)

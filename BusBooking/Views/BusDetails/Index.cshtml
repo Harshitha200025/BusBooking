@@ -28,8 +28,12 @@
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
+    @if(Model== null)
+            {
+<p>No Records</p>
+            }
+    else {
+foreach (var item in Model) {
 <tr>
     <td>
         @Html.DisplayFor(modelItem => item.seatType.typeName)
@@ -53,5 +57,5 @@
     </td>
 </tr>
 }
-
+    }
 </table>

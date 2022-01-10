@@ -204,7 +204,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\add bus.png" />
+    <Content Include="images\booking details.png" />
     <Content Include="images\OurLogo.png" />
+    <Content Include="images\route details.png" />
     <Content Include="images\upDownArrow.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

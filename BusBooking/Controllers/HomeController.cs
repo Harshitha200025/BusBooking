@@ -27,7 +27,7 @@ namespace BusBooking.Controllers
 
             string dest = fc["destination"].ToString();
             Session["bdList"] = bbc.busDetails.Where(x => x.source == src && x.destination == dest).ToList();
-            return RedirectToAction("Create", "BusDetails");
+            return RedirectToAction("Index", "BusDetails");
         }
         
         public ActionResult About()
